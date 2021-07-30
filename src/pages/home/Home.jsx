@@ -18,7 +18,7 @@ const Home = ({ type }) => {
                     }`,
                     {
                         headers: {
-                            token: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZmI2MGI0MDkxOGUyM2ZkMDQ2MTMzMiIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2MjcxMDQzNjIsImV4cCI6MTYyNzUzNjM2Mn0.DhddYH_MUdDwOnEp_5a6EnEIzmHe7RUyBCKBt8dXINw",
+                            token: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZmFlZGRjZWRiMDBkMjBmODljOWI1MSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYyNzYwNDU1NiwiZXhwIjoxNjI4MDM2NTU2fQ.vPdQXWMZotOqq6CGudjLmTtdiNfgbG2mVKVK135ERX0",
                         },
                     }
                 );
@@ -34,8 +34,8 @@ const Home = ({ type }) => {
         <div className="home">
             <Navbar />
             <Featured type={type} setGenre={setGenre} />
-            {lists.map((list) => (
-                <List list={list} />
+            {lists.map((list, i) => (
+                <List list={list} key={i} />
             ))}
             <br />
             <br />
